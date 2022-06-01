@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'django-insecure-u=a5%y)q=qow(hkr@kq)+%whl*-jphm^_#zvyecut18fpow*6m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'daterange_filter',
     # django-cors-headers
     'corsheaders',
+    'video',
 ]
 
 MIDDLEWARE = [
@@ -106,9 +107,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'online_learning',
-        'USER': 'dreamcode',
-        'PASSWORD': 'dreamcode@1025',
-        'HOST': 'db',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
         'PORT': '3306'
     }
 }

@@ -58,6 +58,7 @@ urlpatterns = [
          schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-docs'),
     re_path(r'^auth/', include('rest_framework_social_oauth2.urls')),
+    path('video/', include('video.urls'))
 ]
 
 if settings.DEBUG:
